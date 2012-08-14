@@ -33,16 +33,16 @@ public class QuickSelect {
 		return i;
 	}
 
-	void Sort() {
-		Sort(0, data.length - 1);
+	void Select() {
+		Select(0, data.length - 1);
 	}
 
-	void Sort(int low, int high) {
+	void Select(int low, int high) {
 		if (low < high) {
 			int pivot;
 			pivot = Partition(low, high);
-			Sort(low, pivot - 1);
-			Sort(pivot + 1, high);
+			Select(low, pivot - 1);
+			Select(pivot + 1, high);
 		}
 	}
 
