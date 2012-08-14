@@ -1,19 +1,19 @@
-public class quicksort {
+public class QuickSelect {
 	int[] data;
 	int size;
 
-	public quicksort(int len) {
+	public QuickSelect(int len) {
 		size = len;
 		data = new int[size];
 	}
 
-	public quicksort(int[] data, int size) {
+	public QuickSelect(int[] data, int size) {
 		super();
 		this.data = data;
 		this.size = size;
 	}
 
-	public quicksort(int[] data2) {
+	public QuickSelect(int[] data2) {
 		// TODO Auto-generated constructor stub
 		this.data = data2;
 	}
