@@ -33,17 +33,23 @@ public class QuickSelect {
 		return i;
 	}
 
-	void Select() {
-		Select(0, data.length - 1);
+	int Select(int n) {
+		return Select(0, data.length - 1, n);
 	}
 
-	void Select(int low, int high) {
+	int Select(int low, int high, int n) {
 		if (low < high) {
 			int pivot;
 			pivot = Partition(low, high);
-			Select(low, pivot - 1);
-			Select(pivot + 1, high);
+			if (pivot < n) {
+
+				Select(pivot + 1, high, n - pivot);
+			} else if (pivot > n) {
+				Select(low, pivot - 1, n);
+			}
+			return data[pivot];
 		}
+		return -1;
 	}
 
 	void swap(int i, int j) {
