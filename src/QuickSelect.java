@@ -1,5 +1,8 @@
+import java.io.IOException;
+
 public class QuickSelect {
 	int[] data;
+	private Log log;
 	int size;
 
 	public QuickSelect(int len) {
@@ -7,15 +10,17 @@ public class QuickSelect {
 		data = new int[size];
 	}
 
+	public QuickSelect(int[] data2, String name) throws IOException {
+		// TODO Auto-generated constructor stub
+		this.data = data2;
+		log = new Log(name);
+
+	}
+
 	public QuickSelect(int[] data, int size) {
 		super();
 		this.data = data;
 		this.size = size;
-	}
-
-	public QuickSelect(int[] data2) {
-		// TODO Auto-generated constructor stub
-		this.data = data2;
 	}
 
 	int Partition(int i, int j) {
